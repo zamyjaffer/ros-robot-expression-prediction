@@ -1,0 +1,14 @@
+<launch>
+
+  <!--launching the nodes-->
+  <group ns="ros_robot_expression_prediction_group">
+    <node pkg="ros_robot_expression_prediction" name="interaction_generator" type="interaction_generator.py"/>
+    <node pkg="ros_robot_expression_prediction" name="perception_filter" type="perception_filter.py"/>
+    <node pkg="ros_robot_expression_prediction" name="robot_controller" type="robot_controller.py"/>
+    <node pkg="ros_robot_expression_prediction" name="robot_expression_prediction" type="robot_expression_prediction.py"/>
+  </group>
+  
+  <!--launching rqt_graph-->
+  <node pkg="rqt_graph" type="rqt_graph" name="ros_robot_expression_prediction_graph"/>
+  
+</launch>
